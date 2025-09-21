@@ -1,0 +1,223 @@
+{
+    "form": [
+        {
+            "id": "form-login-basic",
+            "type": "form",
+            "name": "Login Form",
+            "description": "Základný prihlasovací formulár s emailom a heslom",
+            "category": "forms",
+            "props": {
+                "variant": "default",
+                "size": "md",
+                "dark_mode": true,
+                "validation": true,
+                "responsive": true
+            },
+            "html_template": "<form class=\"space-y-6\" action=\"#\">\n  <h5 class=\"text-xl font-medium text-gray-900 dark:text-white\">Prihlásiť sa</h5>\n  <div>\n    <label for=\"email\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Váš email</label>\n    <input type=\"email\" name=\"email\" id=\"email\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white\" placeholder=\"name@company.com\" required>\n  </div>\n  <div>\n    <label for=\"password\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Vaše heslo</label>\n    <input type=\"password\" name=\"password\" id=\"password\" placeholder=\"••••••••\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white\" required>\n  </div>\n  <div class=\"flex items-start\">\n    <div class=\"flex items-start\">\n      <div class=\"flex items-center h-5\">\n        <input id=\"remember\" type=\"checkbox\" value=\"\" class=\"w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800\">\n      </div>\n      <label for=\"remember\" class=\"ml-2 text-sm font-medium text-gray-900 dark:text-gray-300\">Zapamätať si ma</label>\n    </div>\n    <a href=\"#\" class=\"ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500\">Zabudli ste heslo?</a>\n  </div>\n  <button type=\"submit\" class=\"w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800\">Prihlásiť sa do účtu</button>\n  <div class=\"text-sm font-medium text-gray-500 dark:text-gray-300\">\n    Nemáte účet? <a href=\"#\" class=\"text-blue-700 hover:underline dark:text-blue-500\">Vytvoriť účet</a>\n  </div>\n</form>",
+            "css_classes": [
+                "space-y-6",
+                "block",
+                "mb-2",
+                "text-sm",
+                "font-medium",
+                "text-gray-900",
+                "dark:text-white",
+                "bg-gray-50",
+                "border",
+                "border-gray-300",
+                "rounded-lg",
+                "focus:ring-blue-500",
+                "focus:border-blue-500",
+                "w-full",
+                "p-2.5",
+                "dark:bg-gray-600",
+                "dark:border-gray-500",
+                "dark:placeholder-gray-400"
+            ],
+            "javascript": "// Validácia formulára\ndocument.addEventListener('DOMContentLoaded', function() {\n  const form = document.querySelector('form');\n  const emailInput = document.getElementById('email');\n  const passwordInput = document.getElementById('password');\n  \n  form.addEventListener('submit', function(e) {\n    e.preventDefault();\n    \n    // Základná validácia\n    if (!emailInput.value || !passwordInput.value) {\n      alert('Všetky polia sú povinné');\n      return;\n    }\n    \n    // Email validácia\n    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    if (!emailRegex.test(emailInput.value)) {\n      alert('Neplatný email formát');\n      return;\n    }\n    \n    // Úspešné odoslanie\n    console.log('Form submitted successfully');\n  });\n});",
+            "examples": [
+                {
+                    "name": "Základný login form",
+                    "description": "Jednoduchý prihlasovací formulár",
+                    "code": "<form class=\"space-y-6\">\n  <div>\n    <label for=\"email\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Email</label>\n    <input type=\"email\" id=\"email\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white\" required>\n  </div>\n  <div>\n    <label for=\"password\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Heslo</label>\n    <input type=\"password\" id=\"password\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white\" required>\n  </div>\n  <button type=\"submit\" class=\"w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800\">Prihlásiť sa</button>\n</form>",
+                    "category": "basic"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/forms/",
+            "flowbite_version": "2.0.0",
+            "tailwind_version": "3.3.0",
+            "tags": [
+                "form",
+                "login",
+                "authentication",
+                "input",
+                "validation"
+            ],
+            "accessibility": {
+                "labels_associated": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true,
+                "focus_management": true
+            },
+            "interactive": true,
+            "requires_js": true,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        },
+        {
+            "id": "form-contact-basic",
+            "type": "form",
+            "name": "Contact Form",
+            "description": "Kontaktný formulár s názvom, emailom a správou",
+            "category": "forms",
+            "props": {
+                "variant": "default",
+                "size": "md",
+                "dark_mode": true,
+                "validation": true,
+                "responsive": true
+            },
+            "html_template": "<form class=\"space-y-6\">\n  <div>\n    <label for=\"name\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Meno a priezvisko</label>\n    <input type=\"text\" id=\"name\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" placeholder=\"Ján Novák\" required>\n  </div>\n  <div>\n    <label for=\"email\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Email</label>\n    <input type=\"email\" id=\"email\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" placeholder=\"jan@example.com\" required>\n  </div>\n  <div>\n    <label for=\"subject\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Predmet</label>\n    <input type=\"text\" id=\"subject\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" placeholder=\"Ako vám môžeme pomôcť?\" required>\n  </div>\n  <div class=\"sm:col-span-2\">\n    <label for=\"message\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Správa</label>\n    <textarea id=\"message\" rows=\"6\" class=\"block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" placeholder=\"Napíšte vašu správu...\"></textarea>\n  </div>\n  <button type=\"submit\" class=\"py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800\">Odoslať správu</button>\n</form>",
+            "css_classes": [
+                "space-y-6",
+                "block",
+                "mb-2",
+                "text-sm",
+                "font-medium",
+                "text-gray-900",
+                "dark:text-white",
+                "bg-gray-50",
+                "border",
+                "border-gray-300",
+                "rounded-lg",
+                "focus:ring-blue-500",
+                "focus:border-blue-500",
+                "w-full",
+                "p-2.5",
+                "dark:bg-gray-700",
+                "dark:border-gray-600",
+                "dark:placeholder-gray-400",
+                "shadow-sm"
+            ],
+            "examples": [
+                {
+                    "name": "Základný kontaktný formulár",
+                    "description": "Formulár pre kontaktovanie",
+                    "code": "<form class=\"space-y-6\">\n  <div>\n    <label for=\"name\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Meno</label>\n    <input type=\"text\" id=\"name\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\" required>\n  </div>\n  <div>\n    <label for=\"email\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Email</label>\n    <input type=\"email\" id=\"email\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\" required>\n  </div>\n  <div>\n    <label for=\"message\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Správa</label>\n    <textarea id=\"message\" rows=\"4\" class=\"block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500\"></textarea>\n  </div>\n  <button type=\"submit\" class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5\">Odoslať</button>\n</form>",
+                    "category": "basic"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/forms/",
+            "flowbite_version": "2.0.0",
+            "tailwind_version": "3.3.0",
+            "tags": [
+                "form",
+                "contact",
+                "message",
+                "textarea",
+                "communication"
+            ],
+            "accessibility": {
+                "labels_associated": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true,
+                "focus_management": true
+            },
+            "interactive": true,
+            "requires_js": false,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        },
+        {
+            "id": "form-register-basic",
+            "type": "form",
+            "name": "Registration Form",
+            "description": "Registračný formulár s overením hesla",
+            "category": "forms",
+            "props": {
+                "variant": "default",
+                "size": "md",
+                "dark_mode": true,
+                "validation": true,
+                "responsive": true
+            },
+            "html_template": "<form class=\"space-y-4 md:space-y-6\" action=\"#\">\n  <div>\n    <label for=\"email\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Váš email</label>\n    <input type=\"email\" name=\"email\" id=\"email\" class=\"bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" placeholder=\"name@company.com\" required=\"\">\n  </div>\n  <div>\n    <label for=\"password\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Heslo</label>\n    <input type=\"password\" name=\"password\" id=\"password\" placeholder=\"••••••••\" class=\"bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" required=\"\">\n  </div>\n  <div>\n    <label for=\"confirm-password\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Potvrdenie hesla</label>\n    <input type=\"password\" name=\"confirm-password\" id=\"confirm-password\" placeholder=\"••••••••\" class=\"bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500\" required=\"\">\n  </div>\n  <div class=\"flex items-start\">\n    <div class=\"flex items-center h-5\">\n      <input id=\"terms\" aria-describedby=\"terms\" type=\"checkbox\" class=\"w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800\" required=\"\">\n    </div>\n    <div class=\"ml-3 text-sm\">\n      <label for=\"terms\" class=\"font-light text-gray-500 dark:text-gray-300\">Súhlasím s <a class=\"font-medium text-blue-600 hover:underline dark:text-blue-500\" href=\"#\">Obchodnými podmienkami</a></label>\n    </div>\n  </div>\n  <button type=\"submit\" class=\"w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800\">Vytvoriť účet</button>\n  <p class=\"text-sm font-light text-gray-500 dark:text-gray-400\">\n    Už máte účet? <a href=\"#\" class=\"font-medium text-blue-600 hover:underline dark:text-blue-500\">Prihláste sa tu</a>\n  </p>\n</form>",
+            "css_classes": [
+                "space-y-4",
+                "md:space-y-6",
+                "block",
+                "mb-2",
+                "text-sm",
+                "font-medium",
+                "text-gray-900",
+                "dark:text-white",
+                "bg-gray-50",
+                "border",
+                "border-gray-300",
+                "sm:text-sm",
+                "rounded-lg",
+                "focus:ring-blue-600",
+                "focus:border-blue-600",
+                "w-full",
+                "p-2.5",
+                "dark:bg-gray-700",
+                "dark:border-gray-600",
+                "dark:placeholder-gray-400"
+            ],
+            "javascript": "// Validácia registračného formulára\ndocument.addEventListener('DOMContentLoaded', function() {\n  const form = document.querySelector('form');\n  const passwordInput = document.getElementById('password');\n  const confirmPasswordInput = document.getElementById('confirm-password');\n  \n  form.addEventListener('submit', function(e) {\n    e.preventDefault();\n    \n    // Kontrola zhodnosti hesiel\n    if (passwordInput.value !== confirmPasswordInput.value) {\n      alert('Heslá sa nezhodujú');\n      return;\n    }\n    \n    // Kontrola sily hesla\n    if (passwordInput.value.length < 8) {\n      alert('Heslo musí mať aspoň 8 znakov');\n      return;\n    }\n    \n    console.log('Registration form submitted successfully');\n  });\n});",
+            "examples": [
+                {
+                    "name": "Základný registračný formulár",
+                    "description": "Formulár pre registráciu nového používateľa",
+                    "code": "<form class=\"space-y-6\">\n  <div>\n    <label for=\"email\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Email</label>\n    <input type=\"email\" id=\"email\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\" required>\n  </div>\n  <div>\n    <label for=\"password\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Heslo</label>\n    <input type=\"password\" id=\"password\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\" required>\n  </div>\n  <div>\n    <label for=\"confirm-password\" class=\"block mb-2 text-sm font-medium text-gray-900 dark:text-white\">Potvrdenie hesla</label>\n    <input type=\"password\" id=\"confirm-password\" class=\"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5\" required>\n  </div>\n  <button type=\"submit\" class=\"w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center\">Registrovať</button>\n</form>",
+                    "category": "basic"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/forms/",
+            "flowbite_version": "2.0.0",
+            "tailwind_version": "3.3.0",
+            "tags": [
+                "form",
+                "registration",
+                "signup",
+                "password",
+                "validation"
+            ],
+            "accessibility": {
+                "labels_associated": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true,
+                "focus_management": true,
+                "password_requirements": true
+            },
+            "interactive": true,
+            "requires_js": true,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        }
+    ]
+}

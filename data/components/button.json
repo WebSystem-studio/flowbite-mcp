@@ -1,0 +1,337 @@
+{
+    "button": [
+        {
+            "id": "btn-primary-md",
+            "type": "button",
+            "name": "Primary Button",
+            "description": "Hlavné akčné tlačidlo s primary farbou",
+            "category": "buttons",
+            "props": {
+                "variant": "primary",
+                "size": "md",
+                "rounded": true,
+                "dark_mode": true,
+                "shadow": false,
+                "disabled": false,
+                "responsive": true,
+                "theme": "light"
+            },
+            "html_template": "<button type=\"button\" class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800\">{{text}}</button>",
+            "css_classes": [
+                "text-white",
+                "bg-blue-700",
+                "hover:bg-blue-800",
+                "focus:ring-4",
+                "focus:ring-blue-300",
+                "font-medium",
+                "rounded-lg",
+                "text-sm",
+                "px-5",
+                "py-2.5",
+                "mr-2",
+                "mb-2",
+                "dark:bg-blue-600",
+                "dark:hover:bg-blue-700",
+                "focus:outline-none",
+                "dark:focus:ring-blue-800"
+            ],
+            "variations": [
+                {
+                    "id": "btn-primary-sm",
+                    "name": "Small Primary Button",
+                    "description": "Malé primary tlačidlo",
+                    "props": {
+                        "variant": "primary",
+                        "size": "sm"
+                    },
+                    "html_template": "<button type=\"button\" class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800\">{{text}}</button>",
+                    "css_classes": [
+                        "text-white",
+                        "bg-blue-700",
+                        "hover:bg-blue-800",
+                        "focus:ring-4",
+                        "focus:ring-blue-300",
+                        "font-medium",
+                        "rounded-lg",
+                        "text-sm",
+                        "px-3",
+                        "py-2",
+                        "mr-2",
+                        "mb-2"
+                    ]
+                },
+                {
+                    "id": "btn-primary-lg",
+                    "name": "Large Primary Button",
+                    "description": "Veľké primary tlačidlo",
+                    "props": {
+                        "variant": "primary",
+                        "size": "lg"
+                    },
+                    "html_template": "<button type=\"button\" class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-3 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800\">{{text}}</button>",
+                    "css_classes": [
+                        "text-white",
+                        "bg-blue-700",
+                        "hover:bg-blue-800",
+                        "focus:ring-4",
+                        "focus:ring-blue-300",
+                        "font-medium",
+                        "rounded-lg",
+                        "text-base",
+                        "px-5",
+                        "py-3",
+                        "mr-2",
+                        "mb-2"
+                    ]
+                }
+            ],
+            "examples": [
+                {
+                    "name": "Základné použitie",
+                    "description": "Štandardné primary tlačidlo",
+                    "code": "<button type=\"button\" class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800\">Default</button>",
+                    "category": "basic"
+                },
+                {
+                    "name": "S ikonou",
+                    "description": "Primary tlačidlo s ikonou",
+                    "code": "<button type=\"button\" class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800\"><svg class=\"w-5 h-5 mr-2 -ml-1\" fill=\"currentColor\" viewBox=\"0 0 20 20\"><path d=\"M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z\"></path></svg>Stiahnuť</button>",
+                    "category": "with-icon"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/buttons/",
+            "flowbite_version": "2.0.0",
+            "tailwind_version": "3.3.0",
+            "tags": [
+                "button",
+                "primary",
+                "action",
+                "form",
+                "interactive"
+            ],
+            "accessibility": {
+                "role": "button",
+                "focusable": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true
+            },
+            "interactive": true,
+            "requires_js": false,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        },
+        {
+            "id": "btn-secondary-md",
+            "type": "button",
+            "name": "Secondary Button",
+            "description": "Sekundárne tlačidlo s outline štýlom",
+            "category": "buttons",
+            "props": {
+                "variant": "secondary",
+                "size": "md",
+                "rounded": true,
+                "dark_mode": true,
+                "outline": true
+            },
+            "html_template": "<button type=\"button\" class=\"py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700\">{{text}}</button>",
+            "css_classes": [
+                "py-2.5",
+                "px-5",
+                "mr-2",
+                "mb-2",
+                "text-sm",
+                "font-medium",
+                "text-gray-900",
+                "focus:outline-none",
+                "bg-white",
+                "rounded-lg",
+                "border",
+                "border-gray-200",
+                "hover:bg-gray-100",
+                "hover:text-blue-700",
+                "focus:z-10",
+                "focus:ring-4",
+                "focus:ring-gray-200",
+                "dark:focus:ring-gray-700",
+                "dark:bg-gray-800",
+                "dark:text-gray-400",
+                "dark:border-gray-600",
+                "dark:hover:text-white",
+                "dark:hover:bg-gray-700"
+            ],
+            "examples": [
+                {
+                    "name": "Základné použitie",
+                    "description": "Štandardné secondary tlačidlo",
+                    "code": "<button type=\"button\" class=\"py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700\">Alternative</button>",
+                    "category": "basic"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/buttons/",
+            "tags": [
+                "button",
+                "secondary",
+                "alternative",
+                "outline"
+            ],
+            "accessibility": {
+                "role": "button",
+                "focusable": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true
+            },
+            "interactive": true,
+            "requires_js": false,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        },
+        {
+            "id": "btn-success-md",
+            "type": "button",
+            "name": "Success Button",
+            "description": "Úspešné akčné tlačidlo so zelenou farbou",
+            "category": "buttons",
+            "props": {
+                "variant": "success",
+                "size": "md",
+                "rounded": true,
+                "dark_mode": true
+            },
+            "html_template": "<button type=\"button\" class=\"text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800\">{{text}}</button>",
+            "css_classes": [
+                "text-white",
+                "bg-green-700",
+                "hover:bg-green-800",
+                "focus:outline-none",
+                "focus:ring-4",
+                "focus:ring-green-300",
+                "font-medium",
+                "rounded-full",
+                "text-sm",
+                "px-5",
+                "py-2.5",
+                "text-center",
+                "mr-2",
+                "mb-2",
+                "dark:bg-green-600",
+                "dark:hover:bg-green-700",
+                "dark:focus:ring-green-800"
+            ],
+            "examples": [
+                {
+                    "name": "Základné použitie",
+                    "description": "Success tlačidlo pre pozitívne akcie",
+                    "code": "<button type=\"button\" class=\"text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800\">Green</button>",
+                    "category": "basic"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/buttons/",
+            "tags": [
+                "button",
+                "success",
+                "positive",
+                "confirm"
+            ],
+            "accessibility": {
+                "role": "button",
+                "focusable": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true
+            },
+            "interactive": true,
+            "requires_js": false,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        },
+        {
+            "id": "btn-danger-md",
+            "type": "button",
+            "name": "Danger Button",
+            "description": "Nebezpečné akčné tlačidlo s červenou farbou",
+            "category": "buttons",
+            "props": {
+                "variant": "danger",
+                "size": "md",
+                "rounded": true,
+                "dark_mode": true
+            },
+            "html_template": "<button type=\"button\" class=\"text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900\">{{text}}</button>",
+            "css_classes": [
+                "text-white",
+                "bg-red-700",
+                "hover:bg-red-800",
+                "focus:outline-none",
+                "focus:ring-4",
+                "focus:ring-red-300",
+                "font-medium",
+                "rounded-lg",
+                "text-sm",
+                "px-5",
+                "py-2.5",
+                "mr-2",
+                "mb-2",
+                "dark:bg-red-600",
+                "dark:hover:bg-red-700",
+                "dark:focus:ring-red-900"
+            ],
+            "examples": [
+                {
+                    "name": "Základné použitie",
+                    "description": "Danger tlačidlo pre nebezpečné akcie",
+                    "code": "<button type=\"button\" class=\"text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900\">Red</button>",
+                    "category": "basic"
+                }
+            ],
+            "documentation_url": "https://flowbite.com/docs/components/buttons/",
+            "tags": [
+                "button",
+                "danger",
+                "delete",
+                "warning",
+                "destructive"
+            ],
+            "accessibility": {
+                "role": "button",
+                "focusable": true,
+                "keyboard_navigation": true,
+                "screen_reader_friendly": true
+            },
+            "interactive": true,
+            "requires_js": false,
+            "browser_support": [
+                "Chrome",
+                "Firefox",
+                "Safari",
+                "Edge"
+            ],
+            "dependencies": [
+                "tailwindcss",
+                "flowbite"
+            ]
+        }
+    ]
+}
