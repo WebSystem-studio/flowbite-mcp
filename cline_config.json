@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "flowbite": {
+            "command": "python3",
+            "args": [
+                "/mnt/raid1/www/flowbite-mcp/mcp_server_simple.py",
+                "--stdio"
+            ],
+            "cwd": "/mnt/raid1/www/flowbite-mcp",
+            "env": {}
+        }
+    }
+}
