@@ -21,6 +21,10 @@ class ServerConfig:
         
         # Cesty k dátam
         self.base_dir = Path(__file__).parent.parent
+        self.data_dir: str = os.getenv(
+            "DATA_DIR",
+            str(self.base_dir / "data")
+        )
         self.components_dir: str = os.getenv(
             "COMPONENTS_DIR", 
             str(self.base_dir / "data" / "components")
